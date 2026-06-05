@@ -32,3 +32,21 @@ const { data, error } = await supabaseClient
 //   document.getElementById('previewImage').src = url.getPublicUrl
 document.getElementById("preview").src = url.publicUrl;
 }
+
+
+const readFile = async () =>{
+     const { data, error } = await supabaseClient
+        .storage
+        .from('SMIT_FIles')
+        .list();
+
+    if (error) {
+        console.log("Read error:", error);
+        return;
+    }
+       console.log("Files:", data);
+       if (data.length>0){
+        const filePath
+       }
+
+}
